@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" 
+th:replace="~{base::parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <title data-th-text="${loggedInUser.name}+'| Dashboard'">Dashboard Page</title>
+</head>
+<body>
+
+    <div id="content">
+        <!-- sidebar -->
+          <!-- user is logged in : sidebar -->
+        <div th:if="${loggedInUser}">
+            <div data-th-replace="~{user/sidebar::sidebar}"></div>
+        </div>
+
+        <div class="sm:pl-64 pt-5" style="height:auto">
+            <!-- <h1 class="text-5xl">Welcome to Dashboard Page</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, temporibus.</p> -->
+            <div class="grid grid-cols-3 gap-6 mb-10">
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-5xl font-extrabold text-blue-600" th:text="${totalContacts}">0</div>
+                    <div class="mt-2 text-gray-600 font-semibold">Total Contacts</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-5xl font-extrabold text-yellow-500" th:text="${starredContacts}">0</div>
+                    <div class="mt-2 text-gray-600 font-semibold">Starred Contacts</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <div class="text-5xl font-extrabold text-green-600" th:text="${#lists.size(recentContacts)}">0</div>
+                    <div class="mt-2 text-gray-600 font-semibold">Recently Added</div>
+                </div>
+                </div>
+
+                <h2 class="text-xl font-semibold mb-4">Recently Added Contacts</h2>
+                <div class="bg-white rounded-lg shadow p-6">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                    <tr class="border-b border-gray-200">
+                        <th class="py-2">Name</th>
+                        <th class="py-2">Email</th>
+                        <th class="py-2">Phone</th>
+                        <th class="py-2">Favorite</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="contact : ${recentContacts}" class="border-b border-gray-100 hover:bg-gray-50 cursor-pointer">
+                        <td class="py-2" th:text="${contact.name}">Name</td>
+                        <td class="py-2" th:text="${contact.email}">Email</td>
+                        <td class="py-2" th:text="${contact.phoneNumber}">Phone</td>
+                        <td class="py-2">
+                        <span th:text="${contact.favorite} ? '⭐' : ''"></span>
+                        </td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(recentContacts)}">
+                        <td colspan="4" class="py-4 text-center text-gray-500">No recent contacts found.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        console.log("this is a Dashboard page")
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="en" th:replace="~{base::parent(~{::#content},~{::title},~{})}">
+<head>
+    <title>Services Page</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Welcome to services page</h1>
+        <h2>Services offered by SCM</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, velit!
+    </div>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base::parent(~{::#content},~{::title},~{})}">
+<head>
+    <title>Services Page</title>
+</head>
+<body>
+    <div id="content" class="bg-gradient-to-br from-indigo-50 via-white to-purple-100 py-3 px-4">
+        <!-- Header Section -->
+        <div class="max-w-4xl mx-auto text-center mb-12 px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-700 mb-4">Smart Contact Manager</h1>
+            <p class="text-lg text-gray-600 mb-10">Explore the powerful features and services we offer to simplify your contact management experience.</p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+            <!-- Card 1: Contact Management -->
+            <div class="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-xl transition duration-300">
+                <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-700">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M5.121 17.804A13.937 13.937 0 0112 15c2.21 0 4.29.535 6.121 1.488M15 10a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-indigo-700 mb-2">Contact Management</h3>
+                <p class="text-gray-600">Easily add, edit, delete, and search contacts in a secure way.</p>
+            </div>
+
+            <!-- Card 2: Auto Email Service -->
+            <div class="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-xl transition duration-300">
+                <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-green-100 text-green-700">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 11V3"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-green-700 mb-2">Auto Email Service</h3>
+                <p class="text-gray-600">Send automated email alerts to your contacts with ease.</p>
+            </div>
+
+            <!-- Card 3: User Profiles -->
+            <div class="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-xl transition duration-300">
+                <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 text-purple-700">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M12 4v1m0 14v1m8-8h1M4 12H3m15.364-6.364l.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-purple-700 mb-2">User Profiles</h3>
+                <p class="text-gray-600">Each user gets a private dashboard to manage their own contacts.</p>
+            </div>
+
+            <!-- Card 4: Data Security -->
+            <div class="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-xl transition duration-300">
+                <div class="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-red-100 text-red-700">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M12 11c0-1.105.895-2 2-2s2 .895 2 2v3h-4v-3zm-7 4V7a2 2 0 012-2h10a2 2 0 012 2v8m-7 4h4m-4 0a2 2 0 01-2-2m2 2v-2"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-red-700 mb-2">Data Security</h3>
+                <p class="text-gray-600">Your contact data is protected with secure authentication and encryption practices.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-16 text-center">
+            <a data-th-href="@{/home}" class="inline-block bg-indigo-600 text-white text-lg font-medium py-3 px-8 rounded-full shadow-md hover:bg-indigo-700 transition">
+                Get Started with SCM
+            </a>
+        </div>
+    </div>
+</body>
+</html>

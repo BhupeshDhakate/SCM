@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base::parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <title>Home | Smart Contact Manager</title>
+</head>
+<body>
+    <div id="content">
+
+        <!-- Hero Section with Background Image -->
+        <section class="relative h-[65vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/997443/pexels-photo-997443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+            <div class="absolute inset-0 bg-opacity-60"></div>
+            <div class="relative z-10 text-center text-white px-4">
+                <h1 class="text-5xl font-bold mb-4 drop-shadow">Smart Contact Manager</h1>
+                <p class="text-xl max-w-xl mx-auto">A modern, secure, and efficient way to manage your personal and professional contacts.</p>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-12 px-6">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Why Choose SCM?</h2>
+                    <p class="text-gray-600 text-lg mb-4">
+                        Our application helps you store, organize, and retrieve contacts with just a few clicks.
+                        Built with robust backend technology and a smooth user interface, SCM offers a seamless experience for individuals and businesses alike.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Advanced search and filters</li>
+                        <li>Secure login and authentication</li>
+                        <li>Modern UI with full responsiveness</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Open-laptop-with-mobile-phone-sitting-next-to-it-RW10WBy?scl=1" alt="Contact Management Illustration" class="w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-gray-100 py-12">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-4xl font-bold text-indigo-600">100%</h3>
+                    <p class="text-gray-600 mt-2">Secure Storage</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold text-blue-600">24/7</h3>
+                    <p class="text-gray-600 mt-2">Uptime</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold text-green-600">+500</h3>
+                    <p class="text-gray-600 mt-2">Contacts Managed</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold text-purple-600">5★</h3>
+                    <p class="text-gray-600 mt-2">User Ratings</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-12 bg-white text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to get started?</h2>
+            <p class="text-gray-600 mb-6">Create your free account now and manage contacts effortlessly.</p>
+            <a data-th-href="@{'/register'}"  class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition">
+                Sign Up Free
+            </a>
+        </section>
+
+    </div>
+
+    <script>
+        console.log("Home Page Loaded");
+    </script>
+</body>
+</html>
